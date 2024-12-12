@@ -78,7 +78,7 @@ export default function LoomRecorder() {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-2xl mb-4">Loom Recorder</h1>
-      <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+      <body>
           <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
               <h1 class="text-xl font-bold mb-4 text-center text-gray-800">Loom Recording Guide</h1>
               <ol class="space-y-4 text-gray-700">
