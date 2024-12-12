@@ -34,7 +34,8 @@ export default function LoomRecorder() {
         const button = document.getElementById('loom-record-button');
         if (!button) throw new Error('Button element not found');
 
-        const sdkButton = configureButton({
+        // Remove the variable assignment since we don't use it
+        configureButton({
           element: button,
           hooks: {
             onStart: () => {
