@@ -84,7 +84,7 @@ export default function LoomRecorder() {
               <ol class="space-y-4 text-gray-700">
                   <li class="flex items-start">
                       <span class="mr-3 text-blue-600 font-bold">1.</span>
-                      <p>Clicking the "Start Recording" button will pop-up a Loom Recorder.</p>
+                      <p>Clicking the Start Recording button will pop-up a Loom Recorder.</p>
                   </li>
                   <li class="flex items-start">
                       <span class="mr-3 text-blue-600 font-bold">2.</span>
