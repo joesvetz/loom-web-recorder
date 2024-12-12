@@ -76,36 +76,37 @@ export default function LoomRecorder() {
   }, []);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-4" style={{ backgroundColor: 'black', minHeight: '100vh', color: 'white' }}>
       <h1 className="text-2xl mb-4">Loom Recorder</h1>
-      <body>
-          <div class="bg-white shadow-md rounded-lg p-6 max-w-md w-full">
-              <h1 class="text-xl font-bold mb-4 text-center text-gray-800">Loom Recording Guide</h1>
-              <ol class="space-y-4 text-gray-700">
-                  <li class="flex items-start">
-                      <span class="mr-3 text-blue-600 font-bold">1.</span>
-                      <p>Clicking the Start Recording button will pop-up a Loom Recorder.</p>
-                  </li>
-                  <li class="flex items-start">
-                      <span class="mr-3 text-blue-600 font-bold">2.</span>
-                      <p>You will need to allow access to your microphone (camera is optional).</p>
-                  </li>
-                  <li class="flex items-start">
-                      <span class="mr-3 text-blue-600 font-bold">3.</span>
-                      <p>Please use Loom as normal to record your issue <strong>while talking through it out loud</strong> (this is mandatory as it allows the AI to transcribe and summarize the problem to make it searchable).</p>
-                  </li>
-                  <li class="flex items-start">
-                      <span class="mr-3 text-blue-600 font-bold">4.</span>
-                      <p>Once finished, click the Stop button, and copy-paste the link that is generated into your discussion post.</p>
-                  </li>
-              </ol>
-          </div>
-      </body>
+      
+      <div className="bg-white shadow-md rounded-lg p-6 max-w-md w-full mb-4" style={{ color: 'black' }}>
+        <h1 className="text-xl font-bold mb-4 text-center text-gray-800">Loom Recording Guide</h1>
+        <ol className="space-y-4 text-gray-700">
+          <li className="flex items-start">
+            <span className="mr-3 text-blue-600 font-bold">1.</span>
+            <p>Clicking the Start Recording button will pop-up a Loom Recorder.</p>
+          </li>
+          <li className="flex items-start">
+            <span className="mr-3 text-blue-600 font-bold">2.</span>
+            <p>You will need to allow access to your microphone (camera is optional).</p>
+          </li>
+          <li className="flex items-start">
+            <span className="mr-3 text-blue-600 font-bold">3.</span>
+            <p>Please use Loom as normal to record your issue <strong>while talking through it out loud</strong> (this is mandatory as it allows the AI to transcribe and summarize the problem to make it searchable).</p>
+          </li>
+          <li className="flex items-start">
+            <span className="mr-3 text-blue-600 font-bold">4.</span>
+            <p>Once finished, click the Stop button, and copy-paste the link that is generated into your discussion post.</p>
+          </li>
+        </ol>
+      </div>
+
       {error && (
         <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
           {error}
         </div>
       )}
+      
       <button 
         id="loom-record-button"
         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded disabled:opacity-50"
@@ -115,6 +116,7 @@ export default function LoomRecorder() {
          status === 'recording' ? 'Recording...' : 
          'Start Recording'}
       </button>
+      
       <div id="target" className="mt-4"></div>
     </div>
   );
